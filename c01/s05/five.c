@@ -3,7 +3,7 @@
 /*
 	 copy input to output; 1st version
 */
-void main()
+int main()
 {
 	int c;
 

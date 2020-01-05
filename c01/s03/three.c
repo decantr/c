@@ -3,7 +3,7 @@
 /*
 	 print Fahrenheit-Celsius table
 */
-void main()
+int main()
 {
 	int far;
 

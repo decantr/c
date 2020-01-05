@@ -5,7 +5,7 @@
 	 using c = (5/9)(f-32)
 	 for F = 0, 20, ..., 300
 */
-void main()
+int main()
 {
 	float far, cel, low, up, inc;
 

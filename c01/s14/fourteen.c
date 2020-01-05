@@ -1,7 +1,7 @@
 #include <stdio.h>
 
 // count each instance of each char
-void main()
+int main()
 {
 	int c, i;
 	int arrocar[127];
