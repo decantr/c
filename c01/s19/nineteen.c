@@ -3,17 +3,17 @@
 #define MAXLINE 1000
 
 int getln(char line[], int maxline);
-void str_rev(char line[], char out[], int len);
+void str_rev(char line[], int len);
 
 /* reverse each line of the input */
 int main() {
 	int len;
-	char line[MAXLINE], out[MAXLINE];
+	char line[MAXLINE];
 
 	while ((len = getln(line, MAXLINE)) > 0)
 	{
-		str_rev( line, out, len );
-		printf( "%s", out );
+		str_rev( line, len );
+		printf( "%s", line );
 	}
 }
 
@@ -35,13 +35,14 @@ int getln(char s[], int lim) {
 	return i;
 }
 
-void str_rev( char line[], char out[], int len ) { 
-	int i, j;
-	for ( i = len - 2, j = 0; i >= 0; --i,++j ) {
-		out[j] = line[i];
-	}
+void str_rev( char line[], int len ) {
+	int i, j, tmp;
 
-	out[len - 1] = '\n';
-	out[len] = '\0';
+	for ( i = len - 2, j = 0; i > j; --i,++j ) {
+		tmp = line[i];
+
+		line[i] = line[j];
+		line[j] = tmp;
+	}
 }
 
